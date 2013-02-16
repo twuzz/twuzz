@@ -8,7 +8,9 @@ Photo storage and display application written in Rails.
 
 * __id__
 * __email__
-* __password_hash__
+* __password_digest__
+* __first_name__
+* __last_name__
 
 ### Photo
 Photos represent metadata about the photograph.
