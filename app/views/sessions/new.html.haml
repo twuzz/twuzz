@@ -1,0 +1,13 @@
+%h1 Login
+
+=form_tag login_url do
+  %p
+    %b Email <br />
+    %input{ :type => 'text', :name => 'user[email]' }
+    %br
+    %b Password <br />
+    %input{ :type => 'password', :name => 'user[password]' }
+  %p
+    %input{ :type => 'submit', :value => 'Login' }
+
+=link_to 'Register', register_url

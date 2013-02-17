@@ -5,7 +5,8 @@ Twuzz::Application.routes.draw do
   end
 
   controller :sessions do
-    get  '/login', action: 'new'
-    post '/login', action: 'create'
+    get  '/login',  action: 'new'
+    post '/login',  action: 'create'
+    post '/logout', action: 'destroy'
   end
 end
