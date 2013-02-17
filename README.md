@@ -18,9 +18,7 @@ Photos represent metadata about the photograph.
 
 * __id__
 * __user_id__
-* __name__
-* __description__
-* __taken_at__
+* __created_at__
 
 ### Image
 Images belong to Photos. Images are the actual visual data versions (JPG, etc.) of the photograph.
