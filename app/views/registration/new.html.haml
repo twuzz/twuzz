@@ -1,0 +1,23 @@
+%h1 Register
+
+-if @exception
+  =@exception.to_s
+
+=form_for @user, :url => register_url do |user_form|
+  %p
+    %b Email <br />
+    =user_form.text_field :email
+    %br
+    %b Password <br />
+    =user_form.password_field :password
+    %br
+    %b Confirm Password <br />
+    =user_form.password_field :password_confirmation
+    %br
+    %b First Name <br />
+    =user_form.text_field :first_name
+    %br
+    %b Last Name <br />
+    =user_form.text_field :last_name
+  %p
+    =user_form.submit 'Login'

@@ -13,14 +13,21 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-group :test, :development do
-  #gem 'better_errors'
-  #gem 'binding_of_caller'
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'pry-rails'
+end
+
+group :test do
   gem 'shoulda-matchers'
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
   gem 'ci_reporter'
   gem 'simplecov', :require => false
   gem 'syntax'
-  gem 'pry-rails'
+end
+
+# Include in development in addition to test for generators.
+group :test, :development do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
 end
