@@ -1,7 +1,7 @@
 # Twuzz
 Photo storage and display application written in Rails.
 
-[![Build Status](https://travis-ci.org/twuzz/twuzz.png)](https://travis-ci.org/twuzz/twuzz)
+[![Build Status](https://travis-ci.org/twuzz/twuzz.png?branch=master)](https://travis-ci.org/twuzz/twuzz)
 [![Code Climate](https://codeclimate.com/github/twuzz/twuzz.png)](https://codeclimate.com/github/twuzz/twuzz)
 
 ## Models
