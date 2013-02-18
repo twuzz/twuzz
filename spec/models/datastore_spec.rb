@@ -10,6 +10,7 @@ describe Datastore do
     it { should have_db_column(:settings).of_type(:text) }
     it { should have_db_index(:user_id) }
     it { should belong_to(:user) }
+    it { should serialize(:settings).as(OpenStruct) }
     it { should validate_presence_of(:type) }
     it { should validate_presence_of(:user_id) }
   end

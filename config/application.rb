@@ -23,7 +23,8 @@ module Twuzz
 
     # Custom directories with classes and modules you want to be autoloadable.
     config.autoload_paths += [
-      File.join(config.root, 'app', 'controllers', 'handlers')
+      File.join(config.root, 'app', 'controllers', 'handlers'),
+      File.join(config.root, 'app', 'models', 'datastores')
     ]
 
     # Only load the plugins named here, in the order given (default is alphabetical).

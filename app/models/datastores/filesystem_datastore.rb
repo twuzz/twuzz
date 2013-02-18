@@ -1,0 +1,2 @@
+class FilesystemDatastore < Datastore
+end
