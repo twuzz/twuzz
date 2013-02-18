@@ -11,6 +11,7 @@ describe Image do
     it { should have_db_column(:size).of_type(:integer).with_options(null: false) }
     it { should have_db_column(:width).of_type(:integer).with_options(null: false) }
     it { should have_db_column(:height).of_type(:integer).with_options(null: false) }
+    it { should have_db_index([ :photo_id, :original ]) }
     it { should belong_to(:photo) }
     it { should validate_presence_of(:photo_id) }
     it { should validate_presence_of(:original) }
