@@ -7,10 +7,12 @@ gem 'haml'
 platforms :jruby do
   gem 'activerecord-jdbcpostgresql-adapter'
   gem 'activerecord-jdbcsqlite3-adapter'
+  gem 'rmagick4j'
 end
 platforms :ruby do
   gem 'pg'
   gem 'sqlite3'
+  gem 'rmagick'
 end
 
 group :assets do
