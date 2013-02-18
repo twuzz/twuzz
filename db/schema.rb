@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130217230503) do
+ActiveRecord::Schema.define(:version => 20130218060026) do
+
+  create_table "images", :force => true do |t|
+    t.integer "photo_id",                     :null => false
+    t.boolean "original",  :default => false, :null => false
+    t.string  "mime_type",                    :null => false
+    t.integer "size",                         :null => false
+    t.integer "width",                        :null => false
+    t.integer "height",                       :null => false
+  end
+
+  add_index "images", ["photo_id", "original"], :name => "index_images_on_photo_id_and_original"
 
   create_table "photos", :force => true do |t|
     t.integer  "user_id",    :null => false

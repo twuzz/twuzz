@@ -26,10 +26,10 @@ Images belong to Photos. Images are the actual visual data versions (JPG, etc.) 
 * __id__
 * __photo_id__
 * __original__ Boolean, `true` if this was the source image. Only one original is allowed per Photo. All images that are not original are transcoded from the original.
+* __mime_type__ mime type of data ex: `image/jpeg`
 * __size__ data size in bytes
 * __width__ image display width in pixels
 * __height__ image display height in pixels
-* __mime_type__ mime type of data ex: `image/jpeg`
 
 ### Datastore
   Datastores are the logical containers of ImageDatas.
