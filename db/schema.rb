@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130218061529) do
+ActiveRecord::Schema.define(:version => 20130218062219) do
 
   create_table "datastores", :force => true do |t|
     t.string  "type",     :null => false
@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(:version => 20130218061529) do
   end
 
   add_index "datastores", ["user_id"], :name => "index_datastores_on_user_id"
+
+  create_table "image_datas", :force => true do |t|
+    t.integer "image_id",     :null => false
+    t.integer "datastore_id", :null => false
+  end
+
+  add_index "image_datas", ["datastore_id"], :name => "index_image_datas_on_datastore_id"
+  add_index "image_datas", ["image_id", "datastore_id"], :name => "index_image_datas_on_image_id_and_datastore_id", :unique => true
 
   create_table "images", :force => true do |t|
     t.integer "photo_id",                     :null => false
