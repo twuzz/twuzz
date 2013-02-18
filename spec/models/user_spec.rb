@@ -11,6 +11,7 @@ describe User do
     it { should have_db_column(:last_name).of_type(:string) }
     it { should have_db_index(:email).unique(true) }
     it { should have_many(:photos) }
+    it { should have_many(:datastores) }
     #it { should have_secure_password }
     it { should validate_presence_of(:email) }
     it { should validate_uniqueness_of(:email) }

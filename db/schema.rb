@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130218060026) do
+ActiveRecord::Schema.define(:version => 20130218061529) do
+
+  create_table "datastores", :force => true do |t|
+    t.string  "type",     :null => false
+    t.integer "user_id",  :null => false
+    t.text    "settings"
+  end
+
+  add_index "datastores", ["user_id"], :name => "index_datastores_on_user_id"
 
   create_table "images", :force => true do |t|
     t.integer "photo_id",                     :null => false

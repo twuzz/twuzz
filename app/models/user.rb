@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :photos
+  has_many :datastores
 
   has_secure_password
 
