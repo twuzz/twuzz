@@ -1,0 +1,16 @@
+defaults: &defaults
+  adapter: postgresql
+  username: postgres
+  min_messages: ERROR
+  pool: 5
+  timeout: 5000
+  host: localhost
+development:  
+  database: twuzz_development
+  <<: *defaults
+test:  
+  database: twuzz_test
+  <<: *defaults
+production:  
+  database: twuzz_production
+  <<: *defaults
