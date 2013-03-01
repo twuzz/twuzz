@@ -8,7 +8,9 @@ env:
   - DB=sqlite
   - DB=postgresql
 #  - DB=mysql
-script: 
+script:
+  - rm config/database.yml
+  - mv config/database.yml.travis config/database.yml
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
   - bundle exec rspec spec/
