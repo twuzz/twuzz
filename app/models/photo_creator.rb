@@ -2,6 +2,7 @@ class PhotoCreator
   attr_accessor :user, :datastore, :data
 
   def create!
+    photo = nil
     ActiveRecord::Base.transaction do
       photo      = Photo.new
       photo.user = user
@@ -18,7 +19,9 @@ class PhotoCreator
       image_data.image     = image
       image_data.datastore = datastore
       image_data.save!
+      datastore.write_image_data image_data, data
     end
+    photo
   end
 
   def width

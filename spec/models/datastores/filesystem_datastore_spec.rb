@@ -75,7 +75,7 @@ describe FilesystemDatastore do
     end
 
     context 'with settings.root' do
-      let(:root) { File.join Rails.root, 'spec', 'data' }
+      let(:root) { File.join Rails.root, 'tmp' }
       before { filesystem_datastore.settings.root = root }
 
       describe 'path_for_image_data' do
