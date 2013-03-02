@@ -14,4 +14,16 @@ describe Datastore do
     it { should validate_presence_of(:type) }
     it { should validate_presence_of(:user_id) }
   end
+
+  describe 'instance' do
+    let(:datastore) { Datastore.new }
+
+    describe 'write_image_data' do
+      it { lambda{ datastore.write_image_data nil, nil }.should raise_error('write_image_data(image_data, data) must be implemented in Datastore') }
+    end
+
+    describe 'read_image_data' do
+      it { lambda{ datastore.read_image_data nil }.should raise_error('read_image_data(image_data) must be implemented in Datastore') }
+    end
+  end
 end
